@@ -13,6 +13,7 @@ Requirements
 ------------
 
  * [grequests](https://github.com/kennethreitz/grequests)
+ * [requests](https://github.com/kennethreitz/requests)
  * [argparse](https://pypi.python.org/pypi/argparse) (if below Python 2.7 or 3.2)
  * Facebook `app access token` ([FB documentation](https://developers.facebook.com/docs/opengraph/howtos/publishing-with-app-token/))
 

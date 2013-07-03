@@ -2,6 +2,7 @@
 
 import argparse
 import grequests
+import requests
 
 BASE_FB_URL = 'https://graph.facebook.com'
 
@@ -33,7 +34,8 @@ def main():
 
     user_ids = args.recipients_file.read().splitlines()
 
-    rs = [grequests.post("%s/%s/notifications" % (BASE_FB_URL, user_id), params={
+    session = requests.session()
+    rs = [grequests.post("%s/%s/notifications" % (BASE_FB_URL, user_id), session=session, params={
             'access_token': args.access_token,
             'template': args.template,
             'ref': args.ref,
