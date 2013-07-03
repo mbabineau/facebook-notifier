@@ -22,7 +22,7 @@ def main():
     notifier_args = parser.add_argument_group('Notifier arguments')
     notifier_args.add_argument('-f', '--recipients-file', type=argparse.FileType('rt'), required=True, help='File containing list of recipients (newline-delimited FB IDs)')
     notifier_args.add_argument('-c', '--max-concurrent', default=10, type=int, help='Maximum number of concurrent requests (default: 10, max: 100)')
-    notifier_args.add_argument('-l', '--log-level', default="warn", help='Log level (debug, info, [default] warn, error)')
+    notifier_args.add_argument('-l', '--log-level', default="info", help='Log level (debug, [default] info, warn, error)')
     
     # Facebook parameters    
     fb_args = parser.add_argument_group('Facebook arguments')            
