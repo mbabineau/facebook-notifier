@@ -5,8 +5,12 @@ Simple tool to send a Facebook Notifications to each of a list of Facebook users
 
 Example:
 ```
-fb_notifier.py -f user_ids.txt -a '123456789000|abc123abc123_abc123' -t 'This is a message from your friendly application'
-[<Response [200]>, <Response [200]>, <Response [200]>]
+$ fb_notifier.py -f user_ids.txt -a '123456789000|abc123abc123_abc123' -t 'This is a message from your friendly application' -l DEBUG
+2013-07-24 11:24:46,642 [fb_notifier] INFO - Found 3 user IDs
+2013-07-24 11:24:47,036 [fb_notifier] DEBUG - (200, u'100012345678', u'{"success":true}')
+2013-07-24 11:24:47,036 [fb_notifier] DEBUG - (200, u'100087654321', u'{"success":true}')
+2013-07-24 11:24:47,036 [fb_notifier] WARNING - (404, u'fake_user_abc123', u'{"error":{"message":"(#803) Some of the aliases you requested do not exist: fake_user_abc123","type":"OAuthException","code":803}}')
+2013-07-24 11:22:47,036 [fb_notifier] INFO - Completed 3 requests
 ```
 
 Requirements
